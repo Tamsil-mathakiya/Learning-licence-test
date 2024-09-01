@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:400,700,900');
+
+/* ....................... login .................................. */
+
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'Jost', sans-serif;
+	outline: none;
+}
+
+body {
+	font-family: 'Libre Franklin', sans-serif;
+	background: #c1c1c1;
+}
+
+h2 {
+	color: #3E333F;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin: 2rem 0 3rem 0;
+	text-align: center;
+
+}
+
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form {
+	width: 425px;
+	height: auto;
+	background: #fff;
+	padding: 15px 40px 15px 40px;
+	border-radius: 2px;
+}
+
+.form .input_wrap {
+	margin-bottom: 15px;
+	width: 325px;
+	position: relative;
+}
+
+.form .input_wrap:last-child {
+	margin-bottom: 0;
+}
+
+.form .input_wrap label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.form .input_wrap input {
+	padding: 16px;
+	width: 100%;
+	border: 1px solid transparent;
+	font-size: 16px;
+	border-radius: 3px;
+}
+
+.form .input_wrap .input {
+	background: #f5f4f4;
+	padding-right: 35px;
+}
+
+
+.form .input_wrap .input:focus {
+	border-color: #1dbf73;
+}
+
+.form .input_wrap .input_field {
+	position: relative;
+}
+
+.form .input_wrap .btn {
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: #fff;
+}
+
+.form .input_wrap .btn.disabled {
+	background: #727272;
+}
+
+.form .input_wrap .btn.enabled {
+	background: #1dbf73;
+	cursor: pointer;
+}
+
+.form .input_wrap .error_msg {
+	font-size: 15px;
+	margin-bottom: 5px;
+	color: #f74040;
+	display: none;
+}
+
+.Alink h3 a {
+	color: rgb(0, 119, 255);
+}
+
+/* ............................. registration ........................................... */
+
+.wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 70%;
+	margin: 0 auto;
+	padding: 20px 30px;
+	border-radius: 8px;
+}
+
+
+.form-container {
+	width: 100%;
+	margin: 10px auto;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+}
+
+.flex {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: space-evenly;
+	-ms-flex-pack: space-evenly;
+	justify-content: space-evenly;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.flex-item {
+	width: 40%;
+	height: 100%;
+}
+
+label {
+	display: block;
+	font-size: 20px;
+}
+
+.field-container {
+	padding: 5px 10px;
+	margin: 10px 0 10px;
+}
+
+.required {
+	color: red;
+	font-size: 1.1em;
+}
+
+.field-container>input,
+.passkey-box>input {
+	width: 100%;
+	display: inline-block;
+	padding: 7px 15px;
+	font-size: 18px;
+	margin: 5px 0 3px;
+	border-radius: 3px;
+	outline: none;
+	border: none;
+	border-bottom: 2px solid black;
+}
+
+.passkey-box {
+	position: relative;
+}
+
+.passkey-icon {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	font-size: 1.2em;
+}
+
+.field-container>input:focus,
+.passkey-box>input:focus {
+	border-bottom: 2px solid dodgerBlue;
+}
+
+.error-messg {
+	display: block;
+	color: red;
+	font-weight: 300;
+}
+
+.center {
+	text-align: center;
+}
+
+input[type='submit'] {
+	margin-top: 50px;
+	padding: 10px 30px;
+	font-size: 1.2em;
+	background: rgb(17, 92, 167);
+	border: 1px solid white;
+	outline: none;
+	color: white;
+	border-radius: 3px;
+}
+
+@media screen and (max-width: 576px) {
+	.wrapper {
+		width: 100%;
+		padding: 100px 10px 30px;
+		border-radius: 0;
+	}
+
+	h1 {
+		margin-top: 50px;
+	}
+
+	.flex {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+
+	.flex-item {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 576px) {
+	.wrapper {
+		width: 80%;
+		padding: 100px 10px 30px;
+		border-radius: 0;
+	}
+
+	.flex {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+
+	.flex-item {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 662px) {
+	.wrapper {
+		width: 70%;
+		padding: 100px 10px 30px;
+		border-radius: 0;
+	}
+
+	.flex-item {
+		width: 90%;
+		height: 100%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.wrapper {
+		width: 80%;
+		padding: 30px 10px;
+		border-radius: 0;
+	}
+
+	.flex {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+
+	.flex-item {
+		width: 40%;
+		height: 100%;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.wrapper {
+		max-width: 876px;
+		padding: 30px 10px;
+		border-radius: 0;
+	}
+}
+
+/* ........................... quiz ............................................. */
+
+
+.content {
+    margin-top: 54px;
+  }
+  .header {
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+  .left-title {
+    width: 80px;
+    color: #fff;
+    font-size: 18px;
+    float: left;
+  }
+  .right-title {
+    width: 150px;
+    text-align: right;
+    float: right;
+    color: #fff;
+  }
+  .quiz-body {
+    margin-top: 15px;
+    padding-bottom: 50px;
+  }
+  .option-block-container {
+    margin-top: 20px;
+    max-width: 420px;
+  }
+  .option-block {
+    padding: 10px;
+    background: aliceblue;
+    border: 1px solid #84c5fe;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  .result-question {
+    font-weight: bold;
+  }
+  .c-wrong {
+    margin-left: 20px;
+    color: #ff0000;
+  }
+  .c-correct {
+    margin-left: 20px;
+    color: green;
+  }
+  .last-row {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
+  .res-header {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+    
+</style>
+<body>
+    <h2>Registration form</h2>
+    <div class="wrapper">
+        <div class="form">
+            <form method="post" action="/register.html" onsubmit="return validation();">
+                <div class="input_wrap">
+                    <label for="email">Email ID</label>
+                    <div class="input_field">
+                        <input type="email" class="input" id="email" name="emailid">
+                    </div>
+                </div>
+                <div class="input_wrap">
+                    <label for="name">Name</label>
+                    <div class="input_field">
+                        <input type="text" class="input" id="name" name="name">
+                    </div>
+                </div>
+                <div class="input_wrap">
+                    <label for="age">Age</label>
+                    <div class="input_field">
+                        <input type="number" class="input" id="age" name="age">
+                    </div>
+                </div>
+                <div class="input_wrap">
+                    <label for="contactnumber">Contact Number</label>
+                    <div class="input_field">
+                        <input type="number" class="input" id="contactnumber" name="contactnumber">
+                    </div>
+                </div>
+                <div class="input_wrap">
+                    <span class="error_msg">Incorrect input. Please try again</span>
+                    <input type="submit" id="register_btn" class="btn disabled" value="Register" disabled="true">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function validation() {
+            var email = document.querySelector("#email");
+            var name = document.querySelector("#name");
+            var age = document.querySelector("#age");
+            var contactnumber = document.querySelector("#contactnumber");
+            var error_msg = document.querySelector(".error_msg");
+
+            if (email.value.length < 3 || name.value.length < 2 || age.value < 1 || contactnumber.value.length < 10) {
+                error_msg.style.display = "inline-block";
+                return false;
+            } else {
+                alert("Form submitted successfully");
+                return true;
+            }
+        }
+
+        var input_fields = document.querySelectorAll(".input");
+        var register_btn = document.querySelector("#register_btn");
+
+        input_fields.forEach(function (input_item) {
+            input_item.addEventListener("input", function () {
+                var allValid = true;
+                input_fields.forEach(function (input) {
+                    if (input.value.length < 2) {
+                        allValid = false;
+                    }
+                });
+
+                if (allValid) {
+                    register_btn.disabled = false;
+                    register_btn.className = "btn enabled";
+                } else {
+                    register_btn.disabled = true;
+                    register_btn.className = "btn disabled";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
